@@ -9,7 +9,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>                        
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
@@ -20,7 +21,10 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>            
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
@@ -28,7 +32,8 @@
         <TextBlock Grid.Column="1" Grid.Row="2" Text=""/>
         <Button x:Name="budgetButton" Grid.Column="1" Grid.Row="3" Content="Money" Margin="20,10" Padding="10,0"/>
         <Button x:Name="spendingButton" Grid.Column="1" Grid.Row="4" Content="Spendings" Margin="20,10" Padding="10,0"/>
-        
-        
+
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="Current amount" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="moneyTextblock" Grid.Column="2" Grid.Row="4" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
