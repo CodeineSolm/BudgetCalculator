@@ -38,8 +38,12 @@ namespace BudgetUI
             Properties.Settings.Default.Money += Convert.ToDouble(amountTextbox.Text);
             moneyTextblock.Text = Properties.Settings.Default.Money.ToString();
 
+            amountTextbox.Text = "";
+            discriptionTextbox.Text = "";
+
             bCon.Posts.Add(Posts);
-            bCon.SaveChanges();        
+            bCon.SaveChanges();
+            Properties.Settings.Default.Save();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
