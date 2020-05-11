@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BudgetPosts;
 
 namespace BudgetUI
 {
@@ -20,9 +21,16 @@ namespace BudgetUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Posts Posts { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void recordButton_Click(object sender, RoutedEventArgs e)
+        {
+            Posts = new Posts();
+            Posts.Money = 1;
         }
     }
 }
