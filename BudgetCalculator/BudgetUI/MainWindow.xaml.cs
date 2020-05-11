@@ -37,7 +37,8 @@ namespace BudgetUI
             Posts.Date = DateTime.Today;
             Properties.Settings.Default.Money += Convert.ToDouble(amountTextbox.Text);
             moneyTextblock.Text = Properties.Settings.Default.Money.ToString();
-            
+
+            bCon.Posts.Add(Posts);
             bCon.SaveChanges();        
         }
 

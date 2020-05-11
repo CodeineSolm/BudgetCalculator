@@ -8,6 +8,6 @@ namespace BudgetPosts
         {
 
         }
-        DbSet<Posts> Posts { get; set; }
+        public DbSet<Posts> Posts { get; set; }
     }
 }
