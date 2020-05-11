@@ -33,6 +33,14 @@ namespace BudgetUI
             Posts.Money = Convert.ToDouble(amountTextbox.Text);
             Posts.Discription = discriptionTextbox.Text;
             Posts.Date = DateTime.Today;
+            Properties.Settings.Default.Money += Convert.ToDouble(amountTextbox.Text);
+            moneyTextblock.Text = Properties.Settings.Default.Money.ToString();
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            moneyTextblock.Text = Properties.Settings.Default.Money.ToString();
         }
     }
 }
