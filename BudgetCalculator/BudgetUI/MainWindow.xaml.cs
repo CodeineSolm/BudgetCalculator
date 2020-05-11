@@ -22,9 +22,11 @@ namespace BudgetUI
     public partial class MainWindow : Window
     {
         public Posts Posts { get; set; }
+        BudgetContext bCon;
         public MainWindow()
         {
             InitializeComponent();
+            bCon = new BudgetContext();
         }
 
         private void recordButton_Click(object sender, RoutedEventArgs e)
@@ -36,6 +38,7 @@ namespace BudgetUI
             Properties.Settings.Default.Money += Convert.ToDouble(amountTextbox.Text);
             moneyTextblock.Text = Properties.Settings.Default.Money.ToString();
             
+            bCon.SaveChanges();        
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
