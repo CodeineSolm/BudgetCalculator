@@ -30,7 +30,9 @@ namespace BudgetUI
         private void recordButton_Click(object sender, RoutedEventArgs e)
         {
             Posts = new Posts();
-            Posts.Money = 1;
+            Posts.Money = Convert.ToDouble(amountTextbox.Text);
+            Posts.Discription = discriptionTextbox.Text;
+            Posts.Date = DateTime.Today;
         }
     }
 }
