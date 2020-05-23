@@ -30,15 +30,13 @@
         </Grid.RowDefinitions>
 
         <!-- Столбец с меню (перекрасить в будущем) -->
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="11">
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="9">
             <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" HorizontalAlignment="Center"/>
             <TextBlock Grid.Column="1" Grid.Row="2" Text=""/>
             <Button x:Name="MoneyPage" Grid.Column="1" Grid.Row="3" Content="Money" Margin="20,10" Padding="10,0"/>
             <Button x:Name="SpendingsPage" Grid.Column="1" Grid.Row="4" Content="Spendings" Margin="20,10" Padding="10,0"/>
         </StackPanel>
         
-        <!--<Button x:Name="settingsButton" Grid.Column="1" Grid.Row="5" Content="Settings" Margin="20,15" Padding="10,0"/>-->
-
         <!-- Главное окно программы правее от меню -->
         <ContentControl x:Name="ActiveItem" Grid.Column="2" Grid.Row="1" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
     </Grid>
