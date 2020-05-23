@@ -30,21 +30,16 @@
         </Grid.RowDefinitions>
 
         <!-- Столбец с меню (перекрасить в будущем) -->
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="2" Text=""/>
-        <Button x:Name="budgetButton" Grid.Column="1" Grid.Row="3" Content="Money" Margin="20,10" Padding="10,0"/>
-        <Button x:Name="spendingButton" Grid.Column="1" Grid.Row="4" Content="Spendings" Margin="20,10" Padding="10,0"/>
-        <Button x:Name="settingsButton" Grid.Column="1" Grid.Row="5" Content="Settings" Margin="20,15" Padding="10,0"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="11">
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Grid.Row="2" Text=""/>
+            <Button x:Name="MoneyPage" Grid.Column="1" Grid.Row="3" Content="Money" Margin="20,10" Padding="10,0"/>
+            <Button x:Name="SpendingsPage" Grid.Column="1" Grid.Row="4" Content="Spendings" Margin="20,10" Padding="10,0"/>
+        </StackPanel>
+        
+        <!--<Button x:Name="settingsButton" Grid.Column="1" Grid.Row="5" Content="Settings" Margin="20,15" Padding="10,0"/>-->
 
         <!-- Главное окно программы правее от меню -->
-        <TextBlock Grid.Column="2" Grid.Row="3" Text="Current amount" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="moneyTextblock" Grid.Column="2" Grid.Row="4" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Column="2" Grid.Row="5" Text=""  Margin="0,15"/>
-        <TextBlock Grid.Column="2" Grid.Row="6" Text="Amount"  Margin="0,15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="3" Grid.Row="6" Text="Discription"  Margin="0,15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="amountTextbox" Grid.Column="2" Grid.Row="7"  Margin="40,10"/>
-        <TextBox x:Name="discriptionTextbox" Grid.Column="3" Grid.Row="7"  Margin="40,10"/>
-        <Button x:Name="recordButton" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="8" Content="Record" Margin="150,10" />
-
+        <ContentControl x:Name="ActiveItem" Grid.Column="2" Grid.Row="1" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
