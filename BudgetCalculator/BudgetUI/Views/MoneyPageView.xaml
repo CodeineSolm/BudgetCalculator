@@ -35,8 +35,8 @@
         <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" Text=""  Margin="0,30,0,0"/>
         <TextBlock Grid.Column="2" Grid.Row="7" Text="Amount"  Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="3" Grid.Row="7" Text="Discription"  Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox x:Name="amountTextbox" Grid.Column="2" Grid.Row="8"  Margin="40,5,40,10"/>
-        <TextBox x:Name="discriptionTextbox" Grid.Column="3" Grid.Row="8"  Margin="40,5,40,10"/>
-        <Button x:Name="recordButton" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="9" Content="Record" Margin="150,10" />
+        <TextBox x:Name="Money" Grid.Column="2" Grid.Row="8"  Margin="40,5,40,10"/>
+        <TextBox x:Name="Discription" Grid.Column="3" Grid.Row="8"  Margin="40,5,40,10"/>
+        <Button x:Name="recordClick" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="9" Content="Record" Margin="150,10" />
     </Grid>
 </UserControl>

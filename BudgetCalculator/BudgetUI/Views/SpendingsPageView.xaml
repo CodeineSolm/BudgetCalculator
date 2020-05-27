@@ -7,6 +7,6 @@
              mc:Ignorable="d" Background="Green"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <!--<DataGrid></DataGrid>-->
     </Grid>
 </UserControl>
