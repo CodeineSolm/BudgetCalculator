@@ -12,9 +12,9 @@ namespace BudgetUI.ViewModels
 {
     public class MoneyPageViewModel : Screen
     {
-        BudgetContext bCon;
+        BudgetContext bCon = new BudgetContext();
 
-        //Переменная для пополнения/снятия денег
+        //Переменная для пополнения/снятия денег (она связана с текстбоксом при помощи Caliburn.Micro)
         private string _money;
         public string Money
         {
@@ -28,7 +28,7 @@ namespace BudgetUI.ViewModels
                 NotifyOfPropertyChange(() => Money);
             }
         }
-        //Переменная для описания пополнения/снятия денег
+        //Переменная для описания пополнения/снятия денег (она связана с текстбоксом при помощи Caliburn.Micro)
         private string _discription;
         public string Discription
         {
@@ -57,14 +57,19 @@ namespace BudgetUI.ViewModels
             }
         }
 
-        public Posts Post { get; set; }
         public void recordClick()
         {
             //Создаем новый пост в базу
-            Post = new Posts();
+            Posts Post = new Posts();
             Post.Money = Convert.ToDouble(Money);            
             Post.Discription = Discription;
             Post.Date = DateTime.Now;
+
+            //Добавление в глобальную переменную
+            Settings.Default.SavedMoney += Convert.ToDouble(Money);
+
+            //Вывод на экран глобальной переменной
+            SavedMoney = Settings.Default.SavedMoney;
 
             //Сохраняем пост в базе
             bCon.Posts.Add(Post);
