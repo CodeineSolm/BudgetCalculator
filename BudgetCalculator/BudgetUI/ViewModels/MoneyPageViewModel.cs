@@ -38,6 +38,20 @@ namespace BudgetUI.ViewModels
                 NotifyOfPropertyChange(() => Discription);
             }
         }
+        private double _savedMoney;
+
+        public double SavedMoney
+        {
+            get 
+            { 
+                return _savedMoney; 
+            }
+            set 
+            {
+                _savedMoney = value;
+                NotifyOfPropertyChange(() => SavedMoney);
+            }
+        }
         public Posts Post { get; set; }
         public void recordClick()
         {
