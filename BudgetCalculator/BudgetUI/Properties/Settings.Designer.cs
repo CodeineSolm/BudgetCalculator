@@ -26,12 +26,12 @@ namespace BudgetUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public double Money {
+        public double SavedMoney {
             get {
-                return ((double)(this["Money"]));
+                return ((double)(this["SavedMoney"]));
             }
             set {
-                this["Money"] = value;
+                this["SavedMoney"] = value;
             }
         }
     }
