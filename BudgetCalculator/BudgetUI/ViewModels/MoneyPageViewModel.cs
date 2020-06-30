@@ -46,17 +46,17 @@ namespace BudgetUI.ViewModels
         private double _savedMoney;
         public double SavedMoney
         {
-            get 
-            { 
-                return _savedMoney; 
+            get
+            {
+                return _savedMoney;
             }
-            set 
+            set
             {
                 _savedMoney = value;
                 NotifyOfPropertyChange(() => SavedMoney);
             }
-        }
-
+        }           
+        
         public void recordClick()
         {
             //Создаем новый пост в базу
@@ -65,19 +65,25 @@ namespace BudgetUI.ViewModels
             Post.Discription = Discription;
             Post.Date = DateTime.Now;
 
-            //Добавление в глобальную переменную
-            Settings.Default.SavedMoney += Convert.ToDouble(Money);
+            //Добавление в глобальную переменную            
+            Settings.Default.MoneyCount += Convert.ToDouble(Money);
+            Settings.Default.Save();
 
             //Вывод на экран глобальной переменной
-            SavedMoney = Settings.Default.SavedMoney;
+            SavedMoney = Settings.Default.MoneyCount;
 
             //Сохраняем пост в базе
             bCon.Posts.Add(Post);
-            bCon.SaveChanges();
-
+            bCon.SaveChanges(); 
+            
             //Очищаем текстбоксы
             Money = "";
             Discription = "";
+        }
+
+        protected override void OnActivate()
+        {            
+            SavedMoney = Settings.Default.MoneyCount;
         }
     }
 }

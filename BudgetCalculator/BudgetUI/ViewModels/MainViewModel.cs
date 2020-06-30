@@ -14,10 +14,10 @@ namespace BudgetUI.ViewModels
         public void MoneyPage()
         {
             ActivateItem(new MoneyPageViewModel());
-        }        
+        }
         public void SpendingsPage()
         {
             ActivateItem(new SpendingsPageViewModel());
-        }
+        }        
     }
 }
