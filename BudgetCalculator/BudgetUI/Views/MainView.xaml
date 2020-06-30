@@ -30,9 +30,9 @@
         </Grid.RowDefinitions>
 
         <!-- Столбец с меню (перекрасить в будущем) -->
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="9">
-            <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" HorizontalAlignment="Center"/>
-            <TextBlock Grid.Column="1" Grid.Row="2" Text=""/>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="11" Grid.ColumnSpan="2" Background="LightGray">
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" HorizontalAlignment="Center" Margin="10"/>
+            <!--<TextBlock Grid.Column="1" Grid.Row="1" Text=""/>-->
             <Button x:Name="MoneyPage" Grid.Column="1" Grid.Row="3" Content="Money" Margin="20,10" Padding="10,0"/>
             <Button x:Name="SpendingsPage" Grid.Column="1" Grid.Row="4" Content="Spendings" Margin="20,10" Padding="10,0"/>
         </StackPanel>
