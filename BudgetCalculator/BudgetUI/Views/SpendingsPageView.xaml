@@ -8,11 +8,11 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid x:Name="dataGrid" AlternatingRowBackground="LightGray" CanUserAddRows="False" 
-                  AutoGenerateColumns="False">
+                  AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Money}" Header="Money" />
-                <DataGridTextColumn Binding="{Binding Discription}" Header="Discription" />
-                <DataGridTextColumn Binding="{Binding Date}" Header="Date" />
+                <DataGridTextColumn Binding="{Binding Money}" Header="Money" Width="200"/>
+                <DataGridTextColumn Binding="{Binding Discription}" Header="Discription" Width="300" />
+                <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="200"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
