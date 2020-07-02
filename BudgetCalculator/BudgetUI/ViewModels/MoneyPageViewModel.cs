@@ -1,11 +1,6 @@
 ﻿using Caliburn.Micro;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BudgetPosts;
-using System.Windows.Controls;
 using BudgetUI.Properties;
 
 namespace BudgetUI.ViewModels
@@ -81,8 +76,8 @@ namespace BudgetUI.ViewModels
             Discription = "";
         }
 
-        protected override void OnActivate()
-        {            
+        public MoneyPageViewModel()
+        {
             SavedMoney = Settings.Default.MoneyCount;
         }
     }
