@@ -38,6 +38,6 @@
         </StackPanel>
         
         <!-- Главное окно программы правее от меню -->
-        <ContentControl x:Name="ActiveItem" Grid.Column="2" Grid.Row="1" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
+        <ContentControl x:Name="ActiveItem" Grid.Column="2" Grid.Row="0" Grid.RowSpan="11" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
