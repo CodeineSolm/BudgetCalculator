@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BudgetUI.Views"
         mc:Ignorable="d"
-        Title="Budget Calculator" Height="500" Width="900" FontSize="16">
+        Title="Budget Calculator" Height="500" Width="1000" FontSize="16">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
