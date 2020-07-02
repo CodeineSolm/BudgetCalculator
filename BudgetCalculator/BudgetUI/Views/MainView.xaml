@@ -29,12 +29,11 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
-        <!-- Столбец с меню (перекрасить в будущем) -->
+        <!-- Столбец с меню -->
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="11" 
                     Grid.ColumnSpan="2" Background="LightGray">
             <TextBlock Grid.Column="1" Grid.Row="1" Text="Menu" 
-                       HorizontalAlignment="Center" Margin="10" FontSize="20"/>
-            <!--<TextBlock Grid.Column="1" Grid.Row="1" Text=""/>-->
+                       HorizontalAlignment="Center" Margin="10" FontSize="20"/>            
             <Button x:Name="MoneyPage" Grid.Column="1" Grid.Row="3" Content="Money" 
                     Margin="20,10" Padding="5,0,5,4" VerticalAlignment="Center"/>
             <Button x:Name="SpendingsPage" Grid.Column="1" Grid.Row="4" 
@@ -42,7 +41,7 @@
                     Padding="10,0,10,4" VerticalAlignment="Center"/>
         </StackPanel>
         
-        <!-- Главное окно программы правее от меню -->
+        <!-- Активное окно программы (правее от меню) -->
         <ContentControl x:Name="ActiveItem" Grid.Column="2" Grid.Row="0" 
                         Grid.RowSpan="11" Grid.ColumnSpan="3"/>
     </Grid>
