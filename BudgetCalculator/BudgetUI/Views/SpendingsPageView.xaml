@@ -7,11 +7,7 @@
              mc:Ignorable="d" Background="White"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
@@ -33,9 +29,8 @@
         <!-- Строка 2 -->
         <TextBlock Grid.Row="1" />
 
-        <!-- Строка 3 -->
-        <Button x:Name="Update" Grid.Column="0" Grid.Row="2" Content="Update" Margin="130,0" />
-        <Button x:Name="Delete" Grid.Column="1" Grid.Row="2" Content="Delete" Margin="130,0" />
+        <!-- Строка 3 -->        
+        <Button x:Name="Clear" Grid.Column="1" Grid.Row="2" Content="Clear all" Margin="330,0" FontSize="18" />
 
         <!-- Строка 4 -->
         <TextBlock Grid.Row="3" />
