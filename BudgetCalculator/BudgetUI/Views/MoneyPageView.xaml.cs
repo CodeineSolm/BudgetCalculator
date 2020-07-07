@@ -24,5 +24,10 @@ namespace BudgetUI.Views
         {
             InitializeComponent();
         }
+
+        private void Money_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

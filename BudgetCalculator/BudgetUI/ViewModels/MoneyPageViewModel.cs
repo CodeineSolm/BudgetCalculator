@@ -2,10 +2,11 @@
 using System;
 using BudgetPosts;
 using BudgetUI.Properties;
+using System.Windows.Forms;
 
 namespace BudgetUI.ViewModels
 {
-    public class MoneyPageViewModel : Screen
+    public class MoneyPageViewModel : Caliburn.Micro.Screen
     {
         BudgetContext bCon = new BudgetContext();
 
@@ -79,6 +80,6 @@ namespace BudgetUI.ViewModels
         public MoneyPageViewModel()
         {
             SavedMoney = Settings.Default.MoneyCount;
-        }
+        }             
     }
 }
