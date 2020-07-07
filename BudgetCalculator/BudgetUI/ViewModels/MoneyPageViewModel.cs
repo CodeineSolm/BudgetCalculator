@@ -80,6 +80,22 @@ namespace BudgetUI.ViewModels
         public MoneyPageViewModel()
         {
             SavedMoney = Settings.Default.MoneyCount;
-        }             
+        }
+
+        public void ExecuteFilterView(System.Windows.Input.KeyEventArgs keyArgs)
+        {
+            
+            if ((keyArgs.Key == System.Windows.Input.Key.D0) || (keyArgs.Key == System.Windows.Input.Key.D1)) return;
+
+            if ((keyArgs.Key == System.Windows.Input.Key.D2) || (keyArgs.Key == System.Windows.Input.Key.D3)) return;
+
+            if ((keyArgs.Key == System.Windows.Input.Key.D4) || (keyArgs.Key == System.Windows.Input.Key.D5)) return;
+
+            if ((keyArgs.Key == System.Windows.Input.Key.D6) || (keyArgs.Key == System.Windows.Input.Key.D7)) return;
+
+            if ((keyArgs.Key == System.Windows.Input.Key.D8) || (keyArgs.Key == System.Windows.Input.Key.D9)) return;            
+
+            keyArgs.Handled = true;
+        }
     }
 }
