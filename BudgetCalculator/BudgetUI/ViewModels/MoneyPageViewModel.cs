@@ -93,7 +93,9 @@ namespace BudgetUI.ViewModels
 
             if ((keyArgs.Key == System.Windows.Input.Key.D6) || (keyArgs.Key == System.Windows.Input.Key.D7)) return;
 
-            if ((keyArgs.Key == System.Windows.Input.Key.D8) || (keyArgs.Key == System.Windows.Input.Key.D9)) return;            
+            if ((keyArgs.Key == System.Windows.Input.Key.D8) || (keyArgs.Key == System.Windows.Input.Key.D9)) return;
+
+            if ((keyArgs.Key == System.Windows.Input.Key.OemMinus)) return;
 
             keyArgs.Handled = true;
         }
